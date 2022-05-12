@@ -1,0 +1,20 @@
+import.meta.env = {"BASE_URL":"/","MODE":"development","DEV":true,"PROD":false,"SSR":false};import { createApp } from '/node_modules/.vite/deps/vue.js?v=27b126a5'
+import App from '/src/App.vue'
+// 引入路由
+import router from '/src/router.js?t=1652346691562'
+import __vite__cjsImport3_vVideoEmbed from "/node_modules/.vite/deps/v-video-embed.js?v=27b126a5"; const Embed = __vite__cjsImport3_vVideoEmbed.__esModule ? __vite__cjsImport3_vVideoEmbed.default : __vite__cjsImport3_vVideoEmbed
+// Vue.use(Embed);
+
+
+import '/src/assets/css/bootstrap-4.4.1.css'
+import '/src/assets/css/x3dom.css'
+import '/src/assets/css/all.css'
+import '/src/assets/css/custom.css'
+
+// 使用路由
+const vue = createApp(App)
+  .use(router,Embed)
+
+
+vue.mount('#app')
+console.log(import.meta.env);
